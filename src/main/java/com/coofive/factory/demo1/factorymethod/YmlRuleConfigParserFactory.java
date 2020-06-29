@@ -1,8 +1,7 @@
 package com.coofive.factory.demo1.factorymethod;
 
 import com.coofive.factory.demo1.parser.IRuleConfigParser;
-import com.coofive.factory.demo1.parser.XmlRuleConfigParser;
-import com.coofive.factory.demo1.parser.YmlRuleConfigParser;
+import com.coofive.factory.demo1.parser.rule.YmlRuleConfigParser;
 
 /**
  * @author : coofive

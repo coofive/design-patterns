@@ -1,6 +1,7 @@
-package com.coofive.factory.demo1.parser;
+package com.coofive.factory.demo1.parser.rule;
 
 import com.coofive.factory.demo1.config.RuleConfig;
+import com.coofive.factory.demo1.parser.IRuleConfigParser;
 
 /**
  * @author : coofive

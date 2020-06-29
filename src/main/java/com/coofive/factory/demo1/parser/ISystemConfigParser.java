@@ -1,20 +1,20 @@
 package com.coofive.factory.demo1.parser;
 
-import com.coofive.factory.demo1.config.RuleConfig;
+import com.coofive.factory.demo1.config.SystemConfig;
 
 /**
- * 配置规则解析器
+ * 配置系统解析器
  *
  * @author : coofive
  * @version : 1.0.0
  * @date : 2020-06-24 06:56
  */
-public interface IRuleConfigParser {
+public interface ISystemConfigParser {
     /**
      * 解析配置文件
      *
      * @param ruleConfigFilePath 配置文件路径
      * @return 生成配置类
      */
-    RuleConfig parse(String ruleConfigFilePath);
+    SystemConfig parse(String ruleConfigFilePath);
 }

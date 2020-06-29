@@ -1,7 +1,7 @@
 package com.coofive.factory.demo1.factorymethod;
 
 import com.coofive.factory.demo1.parser.IRuleConfigParser;
-import com.coofive.factory.demo1.parser.JsonRuleConfigParser;
+import com.coofive.factory.demo1.parser.rule.JsonRuleConfigParser;
 
 /**
  * @author : coofive

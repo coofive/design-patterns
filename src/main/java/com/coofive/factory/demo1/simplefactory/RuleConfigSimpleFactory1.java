@@ -2,6 +2,10 @@ package com.coofive.factory.demo1.simplefactory;
 
 import com.coofive.factory.demo1.config.RuleConfig;
 import com.coofive.factory.demo1.parser.*;
+import com.coofive.factory.demo1.parser.rule.JsonRuleConfigParser;
+import com.coofive.factory.demo1.parser.rule.PropertiesRuleConfigParser;
+import com.coofive.factory.demo1.parser.rule.XmlRuleConfigParser;
+import com.coofive.factory.demo1.parser.rule.YmlRuleConfigParser;
 
 /**
  * @author : coofive
