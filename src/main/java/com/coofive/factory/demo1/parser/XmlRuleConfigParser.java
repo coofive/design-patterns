@@ -1,4 +1,6 @@
-package com.coofive.factory.simplefactory.demo1;
+package com.coofive.factory.demo1.parser;
+
+import com.coofive.factory.demo1.config.RuleConfig;
 
 /**
  * @author : coofive
@@ -9,6 +11,7 @@ public class XmlRuleConfigParser implements IRuleConfigParser {
 
     @Override
     public RuleConfig parse(String ruleConfigFilePath) {
+        System.out.println("解析XML格式的配置文件");
         return new RuleConfig();
     }
 }

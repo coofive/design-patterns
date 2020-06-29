@@ -1,11 +1,14 @@
-package com.coofive.factory.simplefactory.demo1;
+package com.coofive.factory.demo1.simplefactory;
+
+import com.coofive.factory.demo1.config.RuleConfig;
+import com.coofive.factory.demo1.parser.IRuleConfigParser;
 
 /**
  * @author : coofive
  * @version : 1.0.0
  * @date : 2020-06-24 06:36
  */
-public class RuleConfigFactory {
+public class RuleConfigSimpleFactory2 {
 
     /**
      * 配置文件中加载配置
@@ -15,19 +18,11 @@ public class RuleConfigFactory {
      */
     public RuleConfig load(String ruleConfigFilePath) {
         String ruleConfigFilePathExtension = getFileExtension(ruleConfigFilePath);
-        IRuleConfigParser ruleConfigParser = null;
-        if ("json".equalsIgnoreCase(ruleConfigFilePathExtension)) {
-            ruleConfigParser = new JsonRuleConfigParser();
-        } else if ("xml".equalsIgnoreCase(ruleConfigFilePathExtension)) {
-            ruleConfigParser = new XmlRuleConfigParser();
-        } else if ("yml".equalsIgnoreCase(ruleConfigFilePathExtension)) {
-            ruleConfigParser = new YmlRuleConfigParser();
-        } else if ("properties".equalsIgnoreCase(ruleConfigFilePathExtension)) {
-            ruleConfigParser = new YmlRuleConfigParser();
-        } else {
+        IRuleConfigParser configParser = RuleConfigParserFactory.createParser(ruleConfigFilePathExtension);
+        if (configParser == null)  {
             throw new IllegalArgumentException(String.format("Rule config file format is not supported:%s", ruleConfigFilePath));
         }
-        return ruleConfigParser.parse(ruleConfigFilePath);
+        return configParser.parse(ruleConfigFilePath);
     }
 
     /**

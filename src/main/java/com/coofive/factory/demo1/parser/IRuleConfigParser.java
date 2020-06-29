@@ -1,4 +1,6 @@
-package com.coofive.factory.simplefactory.demo1;
+package com.coofive.factory.demo1.parser;
+
+import com.coofive.factory.demo1.config.RuleConfig;
 
 /**
  * 配置解析器

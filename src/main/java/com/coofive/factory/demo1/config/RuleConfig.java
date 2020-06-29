@@ -1,4 +1,4 @@
-package com.coofive.factory.simplefactory.demo1;
+package com.coofive.factory.demo1.config;
 
 /**
  * @author : coofive
